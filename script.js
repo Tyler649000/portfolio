@@ -14,10 +14,13 @@ for (let title of document.querySelectorAll('.title')) {
 }
 
 for (let video of document.getElementsByTagName('video')) {
-    video.parentElement.addEventListener('mouseenter', function() {
+    var play = function () {
         video.play();
         video.playbackRate = 2;
-    });
+    };
+    
+    video.parentElement.addEventListener('mouseenter', play());
+    video.parentElement.addEventListener('touchstart', play());
       
     video.parentElement.addEventListener('mouseleave', function() {
         video.pause();
