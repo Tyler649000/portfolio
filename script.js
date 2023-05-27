@@ -19,8 +19,8 @@ for (let video of document.getElementsByTagName('video')) {
         video.playbackRate = 2;
     };
     
-    video.parentElement.addEventListener('mouseenter', play());
-    video.parentElement.addEventListener('touchstart', play());
+    video.parentElement.addEventListener('mouseenter', play);
+    video.parentElement.addEventListener('touchstart', play);
       
     video.parentElement.addEventListener('mouseleave', function() {
         video.pause();
