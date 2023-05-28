@@ -13,11 +13,11 @@ for (let title of document.querySelectorAll('.title')) {
     for (let span of spanify(titleString)) title.appendChild(span);
 }
 
-for (let video of document.getElementsByTagName('video')
+for (let video of document.getElementsByTagName('video')) {
     video.parentElement.addEventListener('mouseenter', function() {
         video.play();
         video.playbackRate = 2;
-    );
+    });
       
     video.parentElement.addEventListener('mouseleave', function() {
         video.pause();
